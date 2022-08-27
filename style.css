@@ -6,6 +6,9 @@ body {
 
     margin: 0;
     padding: 0;
+
+    background: #212121;
+    color: white;
 }
 
 #title {
@@ -20,4 +23,65 @@ body {
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.column img {
+    display: block;
+    image-rendering: pixelated;
+
+    width: 10rem;
+    height: 10rem;
+
+    border-style: solid;
+    border-width: 1rem;
+    border-color: black;
+    border-radius: 1rem;;
+
+    align-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
+}
+
+.column img:hover{
+    animation-name: imgSelect;
+    animation-duration: 0.1s;
+    animation-fill-mode: both;
+}
+
+@keyframes imgSelect {
+    from {width: 10rem;}
+    to {width: 11rem;}
+
+    from {height: 10rem;}
+    to {height: 11rem;}
+
+    from {border-width: 1rem;}
+    to {border-width: 0.5rem;}
+}
+
+.column h3 {
+    text-align: center;
+}
+
+.column p {
+    text-align: center;
+}
+
+.column a {
+    text-decoration: none;
+    color: white
 }
